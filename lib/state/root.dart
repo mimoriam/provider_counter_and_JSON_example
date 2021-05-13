@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:provider_counter_example/main.dart';
+import 'package:provider_counter_example/screens/home_page.dart';
 
 // Step 1: Create a class model with ChangeNotifier having all the properties and methods for state in it:
 class Counter extends ChangeNotifier {
