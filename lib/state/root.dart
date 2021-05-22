@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:provider_counter_example/models/TaskModel.dart';
 import 'package:provider_counter_example/screens/home_page.dart';
 
 // Step 1: Create a class model with ChangeNotifier having all the properties and methods for state in it:
 class Counter extends ChangeNotifier {
-  int count = 0;
+  List<TaskModel> todos = [];
 
-  void increment() {
-    count++;
+  void addTodos(TaskModel task) {
+    todos.add(task);
     notifyListeners();
   }
-
-  void decrement() {
-    count--;
+  void deleteTodos() {
+    todos.clear();
     notifyListeners();
   }
 }
